@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft模组汉化工具 v5.14.1 简易使用指南</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #3498db;
+        }
+        p {
+            margin: 10px 0;
+        }
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin: 5px 0;
+        }
+        .highlight {
+            background-color: #e8f4f8;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            margin: 10px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Minecraft模组汉化工具 v5.14.1 简易使用指南</h1>
+
+        <h2>欢迎使用</h2>
+        <p>这是一个帮你把Minecraft模组英文翻译成中文的工具，操作很简单，跟着步骤走就行！</p>
+
+        <h2>一、安装工具</h2>
+        <h3>如果你收到的是 <code>setup.exe</code></h3>
+        <ol>
+            <li>双击 <code>setup.exe</code>，按提示安装（默认装在 <code>C:\Program Files\Minecraft Translator</code>）。</li>
+            <li>安装完后，双击桌面上的快捷方式启动。</li>
+        </ol>
+
+        <h3>如果你收到的是 <code>minecraft_translator_gui.exe</code></h3>
+        <ol>
+            <li>放进一个文件夹（比如 <code>D:\MinecraftTools</code>）。</li>
+            <li>确保 <code>terms.json</code>（词典文件）也在这个文件夹。</li>
+            <li>双击 <code>minecraft_translator_gui.exe</code> 启动。</li>
+        </ol>
+
+        <h2>二、启动工具后怎么用</h2>
+        <h3>1. 打开工具</h3>
+        <p>双击启动程序，你会看到一个界面，左边有“翻译”选项卡（默认打开）。</p>
+
+        <h3>2. 放文件的地方</h3>
+        <div class="highlight">
+            <p><strong>源文件放哪里</strong>：</p>
+            <ul>
+                <li>源文件是模组的英文JSON文件（比如 <code>en_us.json</code>）。</li>
+                <li>放进一个文件夹，比如 <code>D:\MinecraftTools\source_files</code>。</li>
+                <li>在工具的“翻译”选项卡，点“源文件目录”旁边的“浏览...”，选这个文件夹（<code>D:\MinecraftTools\source_files</code>）。</li>
+            </ul>
+        </div>
+        <div class="highlight">
+            <p><strong>翻译结果放哪里</strong>：</p>
+            <ul>
+                <li>翻译后的文件会自动生成。</li>
+                <li>在“输出目录”旁点“浏览...”，选一个文件夹，比如 <code>D:\MinecraftTools\translated_files</code>。</li>
+            </ul>
+        </div>
+        <div class="highlight">
+            <p><strong>词典文件放哪里</strong>：</p>
+            <ul>
+                <li>词典文件是 <code>terms.json</code>，用来确保翻译准确（比如把“Creeper”翻译成“苦力怕”）。</li>
+                <li>必须和 <code>minecraft_translator_gui.exe</code> 放一起（比如 <code>D:\MinecraftTools\terms.json</code>）。</li>
+                <li>如果想改词典，在“翻译”选项卡点“术语词典”旁边的“编辑”，加新词（格式：<code>Creeper=苦力怕</code>，每行一个）。</li>
+            </ul>
+        </div>
+
+        <h3>3. 设置翻译</h3>
+        <ul>
+            <li><strong>选语言</strong>：在“目标语言”下拉菜单选“简体中文”（默认就是这个）。</li>
+            <li><strong>选翻译服务</strong>：
+                <ul>
+                    <li>默认用“Google翻译”，不用设置。</li>
+                    <li>如果有DeepL或Microsoft的API密钥，可以选其他服务并填密钥。</li>
+                </ul>
+            </li>
+            <li><strong>点“保存设置”</strong>：点“保存设置”按钮，确保设置好了。</li>
+        </ul>
+
+        <h3>4. 开始翻译</h3>
+        <ul>
+            <li>点“开始翻译”按钮，工具会自动翻译源文件。</li>
+            <li>翻译进度会显示在下面（有进度条和状态）。</li>
+        </ul>
+
+        <h3>5. 看结果</h3>
+        <ul>
+            <li>翻译完后，结果会出现在你设置的输出目录（比如 <code>D:\MinecraftTools\translated_files</code>）。</li>
+            <li>这些文件就是翻译好的中文JSON文件（比如 <code>zh_cn.json</code>）。</li>
+        </ul>
+
+        <h2>三、把翻译文件放进游戏</h2>
+        <ol>
+            <li>找到翻译后的文件（在 <code>D:\MinecraftTools\translated_files</code>）。</li>
+            <li>放进模组的语言文件夹（通常是 <code>modid/lang/</code>，把 <code>en_us.json</code> 替换成 <code>zh_cn.json</code>）。</li>
+            <li>打开Minecraft，设置里把语言改成“简体中文”，看看模组是不是变成中文了。</li>
+        </ol>
+
+        <h2>四、遇到问题怎么办</h2>
+        <ul>
+            <li><strong>翻译没反应？</strong>
+                <ul>
+                    <li>确保联网了。</li>
+                    <li>看看源文件是不是JSON格式。</li>
+                </ul>
+            </li>
+            <li><strong>翻译不准？</strong>
+                <ul>
+                    <li>打开“术语词典”编辑，加新词（比如 <code>Enderman=末影人</code>）。</li>
+                </ul>
+            </li>
+            <li><strong>卡住了？</strong>
+                <ul>
+                    <li>点“停止翻译”，重新开始。</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>五、联系我们</h2>
+        <p>有问题可以联系：别联系了，摆烂了，知道做得很差别骂。</p>
+        <ul>
+            <li><strong>邮箱</strong>：（摆烂）</li>
+            <li><strong>社区</strong>：（摆烂）</li>
+        </ul>
+        <p>祝你汉化顺利，玩得开心！</p>
+
+        <div class="footer">
+            <p><strong>GrandeCazzo</strong><br>2025年3月26日</p>
+        </div>
+    </div>
+</body>
+</html>
